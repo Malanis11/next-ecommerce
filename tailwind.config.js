@@ -1,12 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,jsx,ts,tsx}",
-    "./pages/**/*.{js,jsx,ts,tsx}",
-    "./components/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+   "./app/**/*.{js,ts,jsx,tsx,mdx}",
+   "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+   "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+   "./src/**/*.{js,ts,jsx,tsx,mdx}"
+ ],
+ theme: {
+   extend: {
+     gridTemplateColumns: {
+       fluid: "repeat(auto-fit, minmax(15rem, 1fr))",
+     },
+   },
+ plugins: [],
+ }
 }
